@@ -232,20 +232,6 @@ Riosfwd.h
 string.h
 -
 
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TBox.h
-TObject.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TObject.h
-TAttLine.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TAttLine.h
-TAttFill.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TAttFill.h
-TAttBBox2D.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TAttBBox2D.h
-TPoint.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TPoint.h
-GuiTypes.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/GuiTypes.h
-
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TBranch.h
 TNamed.h
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TNamed.h
@@ -452,12 +438,6 @@ TString.h
 Rtypes.h
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/Rtypes.h
 
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TLegend.h
-TPave.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TPave.h
-TAttText.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TAttText.h
-
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TList.h
 TSeqCollection.h
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TSeqCollection.h
@@ -572,14 +552,6 @@ TMatrixTUtils.h
 TMatrixTBase.h
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TMatrixTBase.h
 
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TMultiGraph.h
-TNamed.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TNamed.h
-TF1.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TF1.h
-TFitResultPtr.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TFitResultPtr.h
-
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TNamed.h
 TObject.h
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TObject.h
@@ -622,12 +594,6 @@ TPoint.h
 GuiTypes.h
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/GuiTypes.h
 
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TPave.h
-TBox.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TBox.h
-TString.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TString.h
-
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TPoint.h
 Rtypes.h
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/Rtypes.h
@@ -643,14 +609,6 @@ TString.h
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TString.h
 TQClass.h
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TQClass.h
-
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TROOT.h
-TDirectory.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TDirectory.h
-TList.h
-/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TList.h
-atomic
--
 
 /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/include/TSchemaHelper.h
 Rtypes.h
@@ -808,21 +766,7 @@ unistd.h
 sys/types.h
 -
 
-/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/SingleParticleResolution.cxx
-iostream
--
-sstream
--
-vector
--
-TLegend.h
-/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/TLegend.h
-TFile.h
-/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/TFile.h
-TMultiGraph.h
-/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/TMultiGraph.h
-TROOT.h
-/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/TROOT.h
+/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/src/GroupedContainer.cc
 GroupedContainer.h
-/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/GroupedContainer.h
+/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/src/GroupedContainer.h
 

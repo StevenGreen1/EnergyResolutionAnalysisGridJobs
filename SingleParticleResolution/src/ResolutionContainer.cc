@@ -2,7 +2,7 @@
 
 //===========================================
 
-ResolutionContainer::ResolutionContainer(TFile *pTFile, int stageNumber, float trueEnergy, std::string rootFiles, std::string plotPath) :
+ResolutionContainer::ResolutionContainer(TFile *pTFile, int stageNumber, float trueEnergy, std::vector<std::string> rootFiles) :
     m_pTFile(pTFile),
     m_StageNumber(stageNumber),
     m_TrueEnergy(trueEnergy),
@@ -21,8 +21,7 @@ ResolutionContainer::ResolutionContainer(TFile *pTFile, int stageNumber, float t
     m_FitChi2(0.f),
     m_IdealChi2(0.f),
     m_EnergyResolution(0.f),
-    m_EnergyResolutionError(0.f),
-    m_PlotPath(plotPath)
+    m_EnergyResolutionError(0.f)
 {
     float binMax = 2 * m_TrueEnergy;
 
@@ -56,7 +55,13 @@ void ResolutionContainer::ReadData()
     float pfoEnergyTotal(0.f);
     int nPfoTargetsTotal(0), nPfoTargetsNeutralHadrons(0), nPfosTotal(0), nPfosNeutralHadrons(0);
 
-    pTChain->Add(m_RootFiles.c_str());
+    for(std::vector<std::string>::iterator it = m_RootFiles.begin(); it != m_RootFiles.end(); ++it)
+    {
+        std::string rootFileName = *it;
+        std::cout << rootFileName << std::endl;
+        pTChain->Add(rootFileName.c_str());
+    }
+
     pTChain->SetBranchAddress("pfoEnergyTotal",&pfoEnergyTotal);
     pTChain->SetBranchAddress("nPfoTargetsTotal",&nPfoTargetsTotal);
     pTChain->SetBranchAddress("nPfoTargetsNeutralHadrons",&nPfoTargetsNeutralHadrons);
@@ -92,8 +97,8 @@ void ResolutionContainer::Draw()
     pTCanvas->cd();
     m_hEnergy->Draw();
     m_GaussianFit->Draw("same");
-    std::string pngPlotName = m_PlotPath + "SingleParticleEnergyResolution_RecoStage_" + IntToString(m_StageNumber) + "_Kaon0L_" + FloatToString(m_TrueEnergy) + "GeV.png";
-    std::string dotCPlotName = m_PlotPath + "SingleParticleEnergyResolution_RecoStage_" + IntToString(m_StageNumber) + "_Kaon0L_" + FloatToString(m_TrueEnergy) + "GeV.C";
+    std::string pngPlotName = "SingleParticleEnergyResolution_RecoStage_" + IntToString(m_StageNumber) + "_Kaon0L_" + FloatToString(m_TrueEnergy) + "GeV.png";
+    std::string dotCPlotName = "SingleParticleEnergyResolution_RecoStage_" + IntToString(m_StageNumber) + "_Kaon0L_" + FloatToString(m_TrueEnergy) + "GeV.C";
     pTCanvas->SaveAs(pngPlotName.c_str());
     pTCanvas->SaveAs(dotCPlotName.c_str());
 }

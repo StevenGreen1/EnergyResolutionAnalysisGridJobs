@@ -22,7 +22,7 @@ class ResolutionContainer
         TFile         *m_pTFile;
         int            m_StageNumber;
         float          m_TrueEnergy;
-        std::string    m_RootFiles;
+        std::vector<std::string>    m_RootFiles;
         TH1F          *m_hEnergy;
         int            m_BinNumber;
         float          m_MaxHistogramEnergy;
@@ -38,13 +38,12 @@ class ResolutionContainer
         float          m_IdealChi2;
         float          m_EnergyResolution;
         float          m_EnergyResolutionError;
-        std::string    m_PlotPath;
 
     public:
         /*
          * Default Constructor
          */
-        ResolutionContainer(TFile *pTFile, int stageNumber, float energy, std::string rootFiles, std::string plotPath);
+        ResolutionContainer(TFile *pTFile, int stageNumber, float energy, std::vector<std::string> rootFiles);
 
         /*
          * Default Destructor

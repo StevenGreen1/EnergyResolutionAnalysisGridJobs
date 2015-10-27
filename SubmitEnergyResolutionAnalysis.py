@@ -8,21 +8,17 @@ from ILCDIRAC.Interfaces.API.DiracILC import  DiracILC
 from ILCDIRAC.Interfaces.API.NewInterface.UserJob import *
 from ILCDIRAC.Interfaces.API.NewInterface.Applications import *
 
-from AnalysePerformanceGridJobs import *
+from EnergyResolutionAnalysisGridJobs import *
 
 #===== User Input =====
 
 jobDescription = 'OptimisationStudies'
 detModel = sys.argv[1] 
 recoVar = sys.argv[2]
-eventsToSimulate = [ { 'EventType': "Z_uds", 'Energies': [91, 200, 360, 500] } ]
+#eventsToSimulate = [ { 'EventType': "Kaon0L", 'Energies': [1,2,3,4,5,6,7,8,9,10,15,20,25,30,35,40,45,50] } ]
+eventsToSimulate = [ { 'EventType': "Kaon0L", 'Energies': [1,2,5,10,15,20,25,30,40,50] } ]
 pandoraSettings = 'Default'
 
-# MarlinReco_ILD_o1_v06_GJN38_uds91_10_600_Muon.root
-# MarlinReco_ILD_o1_v06_GJN38_uds91_10_600_PerfectPFA.root
-# MarlinReco_ILD_o1_v06_GJN38_uds91_10_600_PerfectPhoton.root
-# MarlinReco_ILD_o1_v06_GJN38_uds91_10_600_PerfectPhotonNK0L.root
-# MarlinReco_ILD_o1_v06_GJN38_uds91_10_700_Default.root
 #===== Second level user input =====
 
 #=====
@@ -31,48 +27,53 @@ pandoraSettings = 'Default'
 JobIdentificationString = jobDescription + '_AnalysePerformance'
 diracInstance = DiracILC(withRepo=True,repoLocation="%s.cfg" %( JobIdentificationString))
 
+runFile = open("RunFile.txt", "a")
+
 for eventSelection in eventsToSimulate:
     eventType = eventSelection['EventType']
+    allRootFilesToUse = []
+
     for energy in eventSelection['Energies']:
+        runFile.write('Kaon0L_Energy_' + str(energy) + '\n')
         rootFilesToProcess = getRootFiles(jobDescription,detModel,recoVar,energy,eventType,pandoraSettings)
-        print 'Submitting analysis of ' + eventType + ' ' + str(energy) + 'GeV jobs.  Detector model ' + str(detModel) + '.  Reconstruction stage ' + str(recoVar) + '.'  
-        runFileName = 'runfile.txt'
-        runFile = open(runFileName,'w')
-        for rootFile in rootFilesToProcess:
+        
+        #allRootFilesToUse.extend(rootFilesToProcess[:10])
+        allRootFilesToUse.extend(rootFilesToProcess[:1])
+        #for rootFile in rootFilesToProcess[:10]:
+        for rootFile in rootFilesToProcess[:1]:
             path, fileName = os.path.split(rootFile)
             runFile.write("%s\n" % fileName)
-        runFile.close()
+        runFile.write('===End_Entry===' + '\n')
 
-        arguements = [
-                       'runfile.txt',
-                       'AnalysePerformance_PandoraSettings' + pandoraSettings + '_DetectorModel_' + str(detModel) + '_Reco_Stage_' + str(recoVar) + '_' + eventType + '_' + str(energy) + 'GeV.root',
-                       'AnalysePerformance_PandoraSettings' + pandoraSettings + '_DetectorModel_' + str(detModel) + '_Reco_Stage_' + str(recoVar) + '_' + eventType + '_' + str(energy) + 'GeV.txt'
-                     ]
+    arguements = [
+                   str(recoVar),
+                   'RunFile.txt',
+                   'Test_EnergyResolution_PandoraSettings' + pandoraSettings + '_DetectorModel_' + str(detModel) + '_Reco_Stage_' + str(recoVar) + '_' + eventType + '.root'
+                   #'EnergyResolution_PandoraSettings' + pandoraSettings + '_DetectorModel_' + str(detModel) + '_Reco_Stage_' + str(recoVar) + '_' + eventType + '.root'
+                 ]
+    outputFiles = arguements[2:]
 
-        outputFiles = arguements[1:]
+    genericApplication = GenericApplication()
+    genericApplication.setScript('SingleParticleResolution.exe')
+    genericApplication.setArguments(' '.join(arguements))
+    genericApplication.setDependency({'ROOT':'5.34'})
 
-        genericApplication = GenericApplication()
-        genericApplication.setScript('AnalysePerformance')
-        genericApplication.setArguments(' '.join(arguements))
-        genericApplication.setDependency({'ROOT':'5.34'})
+    job = UserJob()
+    job.setJobGroup(JobIdentificationString)
+    job.setInputSandbox(['LFN:/ilc/user/s/sgreen/EnergyResolutionTarBall/lib.tar.gz', 'RunFile.txt']) 
+    job.setInputData(allRootFilesToUse)
+    job.setOutputData(outputFiles,OutputPath='/OptimisationStudies/EnergyResolution/Detector_Model_' + str(detModel) + '/Reco_Stage_' + str(recoVar) + '/' + eventType)
+    job.setName(JobIdentificationString)
+    job.setBannedSites(['LCG.IN2P3-CC.fr','LCG.IN2P3-IRES.fr','LCG.KEK.jp','OSG.CIT.us'])
+    job.dontPromptMe()
+    #job.setCPUTime(1000)
+    res = job.append(genericApplication)
 
-        job = UserJob()
-        job.setJobGroup(JobIdentificationString)
-        job.setInputSandbox(['LFN:/ilc/user/s/sgreen/AnalysePerformanceTarBall/lib.tar.gz', 'runfile.txt']) 
-        job.setInputData(rootFilesToProcess)
-        job.setOutputData(outputFiles,OutputPath='/OptimisationStudies/AnalysePerformance/Detector_Model_' + str(detModel) + '/Reco_Stage_' + str(recoVar) + '/' + eventType + '/' + str(energy) + 'GeV')
-
-        job.setName(JobIdentificationString)
-        job.setBannedSites(['LCG.IN2P3-CC.fr','LCG.IN2P3-IRES.fr','LCG.KEK.jp','OSG.CIT.us'])
-        job.dontPromptMe()
-        #job.setCPUTime(1000)
-        res = job.append(genericApplication)
-
-        if not res['OK']:
-            print res['Message']
-            exit()
-        job.submit(diracInstance)
-        os.system('rm *.cfg')
-        os.system('rm runfile.txt')
+    if not res['OK']:
+        print res['Message']
+        exit()
+    job.submit(diracInstance)
+    os.system('rm *.cfg')
+#    os.system('rm RunFile.txt')
 
 # Tidy Up

@@ -35,10 +35,10 @@ RM = /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/CMake/2.8.5/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/CMake/2.8.5/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution
+CMAKE_SOURCE_DIR = /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build
+CMAKE_BINARY_DIR = /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SingleParticleResolution.exe.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/SingleParticleResolution.exe.dir/flags.make
 
 CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.o: CMakeFiles/SingleParticleResolution.exe.dir/flags.make
 CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.o: ../src/SingleParticleResolution.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.o"
-	/usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.o -c /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/SingleParticleResolution.cxx
+	/usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.o -c /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/src/SingleParticleResolution.cxx
 
 CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.i"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/SingleParticleResolution.cxx > CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.i
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/src/SingleParticleResolution.cxx > CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.i
 
 CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.s"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/SingleParticleResolution.cxx -o CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.s
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/src/SingleParticleResolution.cxx -o CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.s
 
 CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.o.requires:
 .PHONY : CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/SingleParticleResolution.exe.dir/src/SingleParticleResolution.cxx.o.p
 
 CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.o: CMakeFiles/SingleParticleResolution.exe.dir/flags.make
 CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.o: ../src/ResolutionContainer.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.o"
-	/usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.o -c /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/ResolutionContainer.cc
+	/usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.o -c /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/src/ResolutionContainer.cc
 
 CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.i"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/ResolutionContainer.cc > CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.i
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/src/ResolutionContainer.cc > CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.i
 
 CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.s"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/ResolutionContainer.cc -o CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.s
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/src/ResolutionContainer.cc -o CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.s
 
 CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.o.requires:
 .PHONY : CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.o.requires
@@ -97,17 +97,17 @@ CMakeFiles/SingleParticleResolution.exe.dir/src/ResolutionContainer.cc.o.provide
 
 CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.o: CMakeFiles/SingleParticleResolution.exe.dir/flags.make
 CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.o: ../src/GroupedContainer.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.o"
-	/usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.o -c /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/GroupedContainer.cc
+	/usr/lib64/ccache/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.o -c /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/src/GroupedContainer.cc
 
 CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.i"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/GroupedContainer.cc > CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.i
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/src/GroupedContainer.cc > CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.i
 
 CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.s"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/src/GroupedContainer.cc -o CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.s
+	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/src/GroupedContainer.cc -o CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.s
 
 CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.o.requires:
 .PHONY : CMakeFiles/SingleParticleResolution.exe.dir/src/GroupedContainer.cc.o.requires
@@ -165,6 +165,6 @@ CMakeFiles/SingleParticleResolution.exe.dir/clean:
 .PHONY : CMakeFiles/SingleParticleResolution.exe.dir/clean
 
 CMakeFiles/SingleParticleResolution.exe.dir/depend:
-	cd /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build/CMakeFiles/SingleParticleResolution.exe.dir/DependInfo.cmake --color=$(COLOR)
+	cd /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build/CMakeFiles/SingleParticleResolution.exe.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SingleParticleResolution.exe.dir/depend
 

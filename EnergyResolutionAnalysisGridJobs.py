@@ -1,4 +1,3 @@
-# Example to submit AnalysePerformance job: AnalysePerformanceGridJobs.py
 import re
 import os
 import sys

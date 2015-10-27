@@ -1,8 +1,8 @@
-# Install script for directory: /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution
+# Install script for directory: /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution")
+  SET(CMAKE_INSTALL_PREFIX "/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -37,15 +37,15 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/SingleParticleResolution.exe")
     FILE(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/SingleParticleResolution.exe"
-         RPATH "/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/lib:/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/lib")
+         RPATH "/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/lib:/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/lib")
   ENDIF()
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build/bin/SingleParticleResolution.exe")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build/bin/SingleParticleResolution.exe")
   IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/SingleParticleResolution.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/SingleParticleResolution.exe")
     FILE(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/SingleParticleResolution.exe"
-         OLD_RPATH "/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/lib:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-         NEW_RPATH "/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/lib:/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/lib")
+         OLD_RPATH "/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/lib:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+         NEW_RPATH "/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/lib:/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/v01-17-07/root/5.34.30/lib")
     IF(CMAKE_INSTALL_DO_STRIP)
       EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/SingleParticleResolution.exe")
     ENDIF(CMAKE_INSTALL_DO_STRIP)
@@ -58,7 +58,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

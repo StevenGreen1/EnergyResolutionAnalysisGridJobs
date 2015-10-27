@@ -1,1 +1,1 @@
-/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/bin/SingleParticleResolution.exe
+/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/bin/SingleParticleResolution.exe

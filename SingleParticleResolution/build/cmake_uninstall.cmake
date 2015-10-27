@@ -3,11 +3,11 @@
 # http://www.cmake.org/Wiki/CMake_FAQ
 ##########################################
 
-IF(NOT EXISTS "/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build/install_manifest.txt")
-  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build/install_manifest.txt\"")
-ENDIF(NOT EXISTS "/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build/install_manifest.txt")
+IF(NOT EXISTS "/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build/install_manifest.txt")
+  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build/install_manifest.txt\"")
+ENDIF(NOT EXISTS "/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build/install_manifest.txt")
 
-FILE(READ "/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build/install_manifest.txt" files)
+FILE(READ "/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build/install_manifest.txt" files)
 STRING(REGEX REPLACE "\n" ";" files "${files}")
 FOREACH(file ${files})
   MESSAGE(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")

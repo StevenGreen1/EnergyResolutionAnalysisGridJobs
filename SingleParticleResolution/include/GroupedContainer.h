@@ -28,7 +28,6 @@ class GroupedContainer
         std::vector<float> m_StdDevPFOEnergies;
         std::vector<float> m_EnergyResolutions;
         std::vector<float> m_EnergyResolutionErrors;
-        std::string m_PlotPath;
         TGraph *m_pResolutionPlot; 
         TGraph *m_pScaledResolutionPlot; 
         TGraph *m_pLinearityPlot; 
@@ -45,7 +44,7 @@ class GroupedContainer
         /*
          * Default Constructor
          */
-        GroupedContainer(TFile *pTFile, int stageNumber, std::vector<float> energies, std::vector<std::string> rootFiles, std::string plotPath);
+        GroupedContainer(TFile *pTFile, int stageNumber, std::vector<float> energies, std::vector<std::vector<std::string> > rootFiles);
 
         /*
          * Default Destructor

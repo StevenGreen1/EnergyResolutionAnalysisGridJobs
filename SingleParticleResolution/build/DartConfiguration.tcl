@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution
-BuildDirectory: /usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution/build
+SourceDirectory: /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution
+BuildDirectory: /usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -33,7 +33,7 @@ ScpCommand: /usr/bin/scp
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/CMake/2.8.5/bin/cmake" "/usera/sg568/ilcsoft_v01_17_07/JEREvolution/SingleParticleResolution"
+ConfigureCommand: "/cvmfs/ilc.desy.de/sw/x86_64_gcc44_sl6/CMake/2.8.5/bin/cmake" "/usera/sg568/ilcsoft_v01_17_07/OptimisationStudies/EnergyResolution/SingleParticleResolution"
 MakeCommand: /usr/bin/gmake -i
 DefaultCTestConfigurationType: Release
 

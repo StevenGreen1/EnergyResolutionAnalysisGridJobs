@@ -4,10 +4,9 @@ Double_t ResolutionFitFunction(Double_t *x, Double_t *par);
 
 //===========================================
 
-GroupedContainer::GroupedContainer(TFile *pTFile, int stageNumber, std::vector<float> energies, std::vector<std::string> rootFiles, std::string plotPath) :
+GroupedContainer::GroupedContainer(TFile *pTFile, int stageNumber, std::vector<float> energies, std::vector<std::vector<std::string> > rootFiles) :
     m_pTFile(pTFile),
     m_StageNumber(stageNumber),
-    m_PlotPath(plotPath),
     m_pResolutionPlot(NULL),
     m_pScaledResolutionPlot(NULL),
     m_pLinearityPlot(NULL),
@@ -28,7 +27,7 @@ GroupedContainer::GroupedContainer(TFile *pTFile, int stageNumber, std::vector<f
     {
         float energy = *it;
         int position = it - energies.begin();
-        ResolutionContainer *pResolutionContainer = new ResolutionContainer(m_pTFile, m_StageNumber,energy,rootFiles.at(position), m_PlotPath);
+        ResolutionContainer *pResolutionContainer = new ResolutionContainer(m_pTFile, m_StageNumber, energy, rootFiles.at(position));
         this->AddContainer(pResolutionContainer);
         delete pResolutionContainer;
     }
@@ -164,8 +163,8 @@ void GroupedContainer::LinearityDrawPlot()
     m_pLinearityFit->Draw("same");
 //    pTF1->Draw("same");
 
-    std::string pngPlotName = m_PlotPath + "SingleParticleEnergyResolution_RecoStage_" + IntToString(m_StageNumber) + "_Linearity.png";
-    std::string dotCPlotName = m_PlotPath + "SingleParticleEnergyResolution_RecoStage_" + IntToString(m_StageNumber) + "_Linearity.C";
+    std::string pngPlotName = "SingleParticleEnergyResolution_RecoStage_" + IntToString(m_StageNumber) + "_Linearity.png";
+    std::string dotCPlotName = "SingleParticleEnergyResolution_RecoStage_" + IntToString(m_StageNumber) + "_Linearity.C";
     pTCanvas->SaveAs(pngPlotName.c_str());
     pTCanvas->SaveAs(dotCPlotName.c_str());
 }
@@ -192,8 +191,8 @@ void GroupedContainer::ResolutionMakeScaledPlot()
     m_pScaledResolutionPlot = new TGraph (tvecTrueEnergy,tvecScaledEnergyResolution);
     m_pScaledResolutionPlot->SetTitle("Scaled Energy Resolution vs Jet Energy");
     m_pScaledResolutionPlot->GetYaxis()->SetTitle("ScaledEnergy Resolution  #frac{#sigma_{Reco}}{E_{Reco}}#sqrt{E_{Reco}}");
-    m_pScaledResolutionPlot->GetYaxis()->SetLimits(0,0.75);
-    m_pScaledResolutionPlot->GetYaxis()->SetRangeUser(0,0.75);
+    m_pScaledResolutionPlot->GetYaxis()->SetLimits(0,2);
+    m_pScaledResolutionPlot->GetYaxis()->SetRangeUser(0,2);
     m_pScaledResolutionPlot->GetXaxis()->SetTitle("True Energy [GeV]");
     m_pScaledResolutionPlot->GetXaxis()->SetLimits(0,55);
     m_pScaledResolutionPlot->GetXaxis()->SetRangeUser(0,55);
@@ -209,8 +208,8 @@ void GroupedContainer::ResolutionMakePlot()
     m_pResolutionPlot = new TGraph (tvecTrueEnergy,tvecEnergyResolution);
     m_pResolutionPlot->SetTitle("Energy Resolution vs Jet Energy");
     m_pResolutionPlot->GetYaxis()->SetTitle("Energy Resolution  #sigma_{Reco} / E_{Reco}");
-    m_pResolutionPlot->GetYaxis()->SetLimits(0,0.75);
-    m_pResolutionPlot->GetYaxis()->SetRangeUser(0,0.75);
+    m_pResolutionPlot->GetYaxis()->SetLimits(0,2);
+    m_pResolutionPlot->GetYaxis()->SetRangeUser(0,2);
     m_pResolutionPlot->GetXaxis()->SetTitle("True Energy [GeV]");
     m_pResolutionPlot->GetXaxis()->SetLimits(0,55);
     m_pResolutionPlot->GetXaxis()->SetRangeUser(0,55);
@@ -256,8 +255,8 @@ void GroupedContainer::ResolutionDrawPlot()
     }
     pTF1->Draw("same");
 
-    std::string pngPlotName = m_PlotPath + "SingleParticleEnergyResolution_RecoStage_" + IntToString(m_StageNumber) + "_Resolution.png";
-    std::string dotCPlotName = m_PlotPath + "SingleParticleEnergyResolution_RecoStage_" + IntToString(m_StageNumber) + "_Resolution.C";
+    std::string pngPlotName = "SingleParticleEnergyResolution_RecoStage_" + IntToString(m_StageNumber) + "_Resolution.png";
+    std::string dotCPlotName = "SingleParticleEnergyResolution_RecoStage_" + IntToString(m_StageNumber) + "_Resolution.C";
     pTCanvas->SaveAs(pngPlotName.c_str());
     pTCanvas->SaveAs(dotCPlotName.c_str());
 }
